@@ -1,0 +1,13 @@
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100% ;
+}
+
+@media screen and (max-width: 480px)　{ 0px～480pxの画面サイズにCSSを適応 }
+@media screen and (min-width: 480px)　{ 480以上の画面サイズにCSSを適応 }
+@media screen and (min-width: 480px) and ( max-width:1024px)　 { 480px～1024pxの画面サイズにCSSを適応 }
+
+table{
+  border-collapse:collapse;
+}

@@ -1,0 +1,30 @@
+<center>
+<p id="notice"><%= notice %></p>
+
+<h1>掲示板</h1>
+
+<table border="1">
+　<tr>
+　　<th>名前</th>
+　　<th>メールアドレス</th>
+   <th colspan="3"></th>
+　</tr>
+
+<tbody>
+  <% @blogs.each do |blog| %>
+  <tr>
+    <td><%= blog.name %></td>
+    <td><%= blog.address %></td>
+    <td><%= link_to '詳細', blog %></td>
+    <td><%= link_to '編集', edit_blog_path(blog) %></td>
+    <td><%= link_to '削除', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+</tbody>
+</table>
+
+
+<br>
+
+<%= link_to '新規投稿', new_blog_path %>
+</center>
